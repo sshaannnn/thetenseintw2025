@@ -6,3 +6,10 @@
   width: 100%;
   height: auto;
 }
+
+.custom-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem; /* 比預設小一點 */
+  color: #333; /* 可選文字顏色 */
+}
