@@ -44,7 +44,7 @@ async function fetchData(area) {
                 <tr>
                   <th scope="col"><img src="image.png" /></th>
                   <th scope="col">位置</th>
-                  <th scope="col">ID</th>
+                  <th scope="col">提供者</th>
                 </tr>
               </thead>
               <tbody>

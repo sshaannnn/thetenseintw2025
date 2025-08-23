@@ -7,9 +7,58 @@
   height: auto;
 }
 
-.custom-text {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.85rem; /* 比預設小一點 */
-  color: #333; /* 可選文字顏色 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh; /* 頁面至少填滿視窗高度 */
+}
+
+.container {
+  flex: 1; /* 撐開，讓 footer 推到下面 */
+}
+
+.footer a {
+  color: #f0587b; /* 換成你想要的顏色，例如藍色 */
+  text-decoration: none; /* 移除底線 */
+}
+
+.footer a:hover {
+  color: #f0587b; /* 滑鼠移上去時的顏色 */
+}
+
+/* 正常貼bottom：網頁、手機橫向、ipad橫向*/
+@media (orientation: landscape) {
+  .footer {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem; /* 比預設小一點 */
+    color: #333; /* 可選文字顏色 */
+
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* 假的貼bottom：手機直向、ipad直向 */
+@media (orientation: portrait) {
+  .footer {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem; /* 比預設小一點 */
+    color: #333; /* 可選文字顏色 */
+
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* 或自訂 */
+    text-align: center;
+    background: white; /* 避免跟背景圖重疊看不清楚 */
+  }
 }
